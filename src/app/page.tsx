@@ -2,7 +2,7 @@ import Hero from '../components/Hero';
 import Service from '../components/Service';
 import ProjectSlider from '../components/ProjectSlider';
 import ContactForm from '../components/ContactForm';
-import ExcelSlider from '@/components/ExcelSlider';
+import ExcelSlider from '../components/ExcelSlider';
 
 export default function Home() {
   return (
@@ -18,7 +18,6 @@ export default function Home() {
       <section id="projects">
         <h2>Projekti</h2>
         <ProjectSlider />
-        <ExcelSlider/>
       </section>
       <section id="about">
         <h2>O nama</h2>
@@ -26,6 +25,7 @@ export default function Home() {
       </section>
       <section id="contact">
         <h2>Kontaktirajte nas</h2>
+        <ExcelSlider/>
         <ContactForm />
       </section>
     </div>

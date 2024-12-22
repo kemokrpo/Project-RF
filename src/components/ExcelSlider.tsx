@@ -1,9 +1,12 @@
-'use client';
+"use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
 import { readExcelFile } from "../utils/readExcel";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-interface ProjectData {
+interface Project {
   sheetName: string;
   image: string | null;
   oblast: string;
@@ -12,54 +15,72 @@ interface ProjectData {
 }
 
 const ExcelSlider: React.FC = () => {
-  const [projects, setProjects] = useState<ProjectData[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const data = await readExcelFile(file);
-      setProjects(data);
-    }
+  useEffect(() => {
+    const loadProjects = async () => {
+      try {
+        const data = await readExcelFile("/data/ReferenceGFUNMO.xlsx");
+        
+        // Log loaded projects data
+        console.log("Loaded projects:", data);
+        
+        setProjects(data);
+      } catch (error) {
+        console.error("Error loading Excel data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProjects();
+  }, []);
+
+  if (loading) {
+    return <div className="text-center text-lg">Učitavanje projekata...</div>;
+  }
+
+  if (!projects.length) {
+    return <div className="text-center text-lg">Nema projekata...</div>;
+  }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   return (
-    <div className="w-4/5 mx-auto">
-      {/* File Upload */}
-      <input
-        type="file"
-        accept=".xlsx, .xls"
-        onChange={handleFileUpload}
-        className="mb-4"
-      />
-
-      {/* Slider */}
-      {projects.length > 0 ? (
-        <section className="relative">
-          <h2 className="text-center text-xl font-bold mb-4">
-            {projects[0]?.sheetName} Projects
-          </h2>
-          <div className="slickSlider relative overflow-hidden">
-            {projects.map((project, index) => (
-              <div key={index} className="slide text-center">
-                {project.image ? (
-                  <img
-                    src={project.image}
-                    alt={`Project ${index + 1}`}
-                    className="w-full h-96 object-contain"
-                  />
-                ) : null}
-                <div className="mt-2 text-left">
-                  <p><strong>Oblast:</strong> {project.oblast}</p>
-                  <p><strong>Year:</strong> {project.year}</p>
-                  <p><strong>Description:</strong> {project.description}</p>
-                </div>
-              </div>
-            ))}
+    <div className="w-full max-w-3xl mx-auto mt-10">
+      <Slider {...settings}>
+        {projects.map((project, index) => (
+          <div key={index} className="flex flex-col items-center p-4 bg-white rounded-lg shadow-lg">
+            {/* Display image from column H */}
+            {project.image && (
+              <img
+                src={project.image}
+                alt={`Projekt ${index + 1}`}
+                className="w-full h-auto max-h-96 object-contain mb-4"
+              />
+            )}
+            {/* Display Year (Godina), Area (Oblast), and Description (Opis) */}
+            <div className="text-center space-y-2">
+              <p className="font-semibold text-lg text-gray-800">
+                <span className="text-gray-500">Godina:</span> {project.year}
+              </p>
+              <p className="font-semibold text-lg text-gray-800">
+                <span className="text-gray-500">Oblast:</span> {project.oblast}
+              </p>
+              <p className="font-medium text-gray-700">
+                <span className="text-gray-500">Opis:</span> {project.description}
+              </p>
+            </div>
           </div>
-        </section>
-      ) : (
-        <p className="text-center">Upload an Excel file to display projects.</p>
-      )}
+        ))}
+      </Slider>
     </div>
   );
 };
