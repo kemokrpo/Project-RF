@@ -12,7 +12,7 @@ export const readExcelFile = (filePath: string): ProjectData[] => {
   const data: ProjectData[] = [];
   
   // Read the file synchronously
-  const workbook = XLSX.readFile(filePath);
+  const workbook = XLSX.readFile("@public/data/ReferenceGFUNMO.xls");
 
   workbook.SheetNames.forEach((sheetName) => {
     const sheet = workbook.Sheets[sheetName];
