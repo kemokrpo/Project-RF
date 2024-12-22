@@ -20,11 +20,12 @@ const ProjectSlider: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
   };
-
+{/*
   useEffect(() => {
     const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
   }, []);
+*/}
 
   return (
     <section id="project-slider" className="relative w-full mx-auto">
