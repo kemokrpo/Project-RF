@@ -57,7 +57,7 @@ const ExcelSlider: React.FC = () => {
     <div className="w-full max-w-3xl mx-auto mt-10">
       <Slider {...settings}>
         {projects.map((project, index) => (
-          <div key={index} className="flex flex-col items-center p-4 bg-white rounded-lg shadow-lg">
+          <div key={index} className="flex flex-col items-center p-4 bg-blue rounded-lg shadow-lg">
             {/* Display image from column H */}
             {project.image && (
               <img
