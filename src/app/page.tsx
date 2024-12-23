@@ -17,7 +17,7 @@ export default function Home() {
       </section>
       <section id="projects">
         <h2>Projekti</h2>
-        <ProjectSlider />
+        <ExcelSlider/>
       </section>
       <section id="about">
         <h2>O nama</h2>
@@ -25,7 +25,6 @@ export default function Home() {
       </section>
       <section id="contact">
         <h2>Kontaktirajte nas</h2>
-        <ExcelSlider/>
         <ContactForm />
       </section>
     </div>
