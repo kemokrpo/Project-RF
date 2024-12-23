@@ -1,6 +1,5 @@
 import Hero from '../components/Hero';
 import Service from '../components/Service';
-import ProjectSlider from '../components/ProjectSlider';
 import ContactForm from '../components/ContactForm';
 import ExcelSlider from '../components/ExcelSlider';
 
