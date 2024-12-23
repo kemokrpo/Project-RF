@@ -20,11 +20,13 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-gray-900 text-white`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} bg-gray-900 text-black`}>
         <div>
-          <header className="bg-gray-800 text-white shadow-md">
+          <header className="bg-gold text-black shadow-md">
             <div className="container mx-auto p-4 flex justify-between items-center">
-              <div className="logo text-3xl font-bold">Text</div>
+              <div className="logo text-3xl font-bold">
+                <img src="/logo.png" className="h-24 w-auto"></img>
+              </div>
               <nav>
                 <ul className="flex space-x-8">
                   <li>
@@ -44,9 +46,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </header>
           <main>{children}</main>
-          <footer className="bg-gray-800 text-white py-6">
+          <footer className="bg-gold text-white py-6">
             <div className="container mx-auto text-center">
-              <p>&copy; Godina. Naziv Firme. All rights reserved.</p>
+              <p>&copy; 2025, WEKAS d.o.o, All rights reserved.</p>
             </div>
           </footer>
         </div>

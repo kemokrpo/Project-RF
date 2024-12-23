@@ -68,14 +68,14 @@ const ExcelSlider: React.FC = () => {
             )}
             {/* Display Year (Godina), Area (Oblast), and Description (Opis) */}
             <div className="text-center space-y-2">
-              <p className="font-semibold text-lg text-gray-800">
-                <span className="text-gray-500">Godina:</span> {project.year}
+              <p className="font-semibold text-lg text-white-800">
+                <span className="text-white-500">Godina:</span> {project.year}
               </p>
-              <p className="font-semibold text-lg text-gray-800">
-                <span className="text-gray-500">Oblast:</span> {project.oblast}
+              <p className="font-semibold text-lg text-white-800">
+                <span className="text-white-500">Oblast:</span> {project.oblast}
               </p>
-              <p className="font-medium text-gray-700">
-                <span className="text-gray-500">Opis:</span> {project.description}
+              <p className="font-medium text-white-700">
+                <span className="text-white-500">Opis:</span> {project.description}
               </p>
             </div>
           </div>
