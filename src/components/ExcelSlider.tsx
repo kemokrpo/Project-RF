@@ -54,7 +54,7 @@ const ExcelSlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto mt-10">
+    <div className="w-full max-w-3xl mx-auto bg-gray-800 z-9999">
       <Slider {...settings}>
         {projects.map((project, index) => (
           <div key={index} className="flex flex-col items-center p-4 bg-blue rounded-lg shadow-lg">

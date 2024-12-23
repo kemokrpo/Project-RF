@@ -7,11 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "setup": "npm install",              
+    "setup": "npm install",
     "start-project": "npm install && npm run build && npm run start",
-    "export" : "next export" 
+    "export": "next export"
   },
   "dependencies": {
+    "@next/font": "^14.2.15",
     "exceljs": "^4.4.0",
     "next": "15.1.2",
     "react": "^19.0.0",
