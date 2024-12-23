@@ -6,7 +6,7 @@ import React from 'react';
 
 const ContactForm: React.FC = () => {
   return (
-    <section id="contact" className="py-20 px-4 bg-gold text-white">
+    <section id="contact" className="py-20 px-4 bg-gold text-black">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Kontaktirajte nas</h2>
 
       <form
@@ -20,7 +20,7 @@ const ContactForm: React.FC = () => {
             type="text"
             placeholder="Your Name"
             required
-            className="w-full p-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full p-3 bg-gray-700 text-black rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
         </div>
         <div className="mb-6">
@@ -28,20 +28,20 @@ const ContactForm: React.FC = () => {
             type="email"
             placeholder="Your Email"
             required
-            className="w-full p-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full p-3 bg-gray-700 text-black rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
         </div>
         <div className="mb-6">
           <textarea
             placeholder="Your Message"
             required
-            className="w-full p-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full p-3 bg-gray-700 text-black rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
             rows={6}
           />
         </div>
         <button
           type="submit"
-          className="w-full py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-300"
+          className="w-full py-3 bg-orange-500 text-black rounded-lg hover:bg-orange-600 transition duration-300"
         >
           Send Message
         </button>

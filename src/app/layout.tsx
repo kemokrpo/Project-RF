@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </header>
           <main>{children}</main>
-          <footer className="bg-gold text-white py-6">
+          <footer className="bg-gold text-black py-6">
             <div className="container mx-auto text-center">
               <p>&copy; 2025, WEKAS d.o.o, All rights reserved.</p>
             </div>
