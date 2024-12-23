@@ -6,7 +6,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-cover bg-center text-white py-24 px-4" style={{ backgroundImage: "url('@/public/backgrounds/slikk3.jpg')" }}>
+    <section className="relative bg-cover bg-center text-white py-24 px-4" style={{ backgroundImage: "url('/backgrounds/slikk3.jpg')" }}>
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black pointer-events-none"></div>
 

@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image'; // Import Image from next/image
 
 const images = [
   '/projects/tbs1.jpg',
@@ -20,12 +21,6 @@ const ProjectSlider: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
   };
-{/*
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
-    return () => clearInterval(interval);
-  }, []);
-*/}
 
   return (
     <section id="project-slider" className="relative w-full mx-auto">
@@ -36,10 +31,13 @@ const ProjectSlider: React.FC = () => {
             key={index}
           >
             <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] bg-black flex justify-center items-center">
-              <img
+              {/* Use Image component instead of <img> */}
+              <Image
                 src={img}
                 alt={`Image ${index + 1}`}
                 className="max-h-full object-contain block"
+                width={500}  // Add width and height to Image component for optimization
+                height={300}
               />
             </div>
           </div>

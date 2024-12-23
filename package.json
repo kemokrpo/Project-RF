@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup": "npm install",              
+    "start-project": "npm install && npm run build && npm run start",
+    "export" : "next export" 
   },
   "dependencies": {
     "exceljs": "^4.4.0",
