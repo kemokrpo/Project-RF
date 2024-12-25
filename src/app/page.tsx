@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <section id="services" className='bg-white'>
         {/*<h2>Naše usluge</h2>*/}
-        <Service title="Usluga #1" description="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
+        <Service title="Projektovanje" description="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
       </section>
       <section id="projects" className='bg-white'>
         {/*<h2>Projekti</h2>*/}
