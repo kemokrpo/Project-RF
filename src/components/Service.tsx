@@ -11,9 +11,9 @@ interface ServiceProps {
 const Service: React.FC<ServiceProps> = ({ title, description }) => {
   // Services data array using the `title` prop for dynamic titles
   const services = [
-    { title: title || 'Usluga #1', description },  // Using prop for dynamic title
-    { title: 'Usluga #2', description },
-    { title: 'Usluga #3', description }
+    { title: 'Projektovanje', description },  // Using prop for dynamic title
+    { title: 'Nadzor', description },
+    { title: 'Consulting', description }
   ];
 
   return (

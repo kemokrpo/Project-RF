@@ -11,8 +11,8 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none"></div>
 
       <div className="relative z-10 text-center">
-        <h1 className="text-4xl text-black md:text-5xl font-bold mb-4">Text 1</h1>
-        <p className="text-lg text-black md:text-xl mb-6">Slogan</p>
+        <h1 className="text-4xl text-black md:text-5xl font-bold mb-4">WEKAS</h1>
+        <p className="text-lg text-black md:text-xl mb-6">Water, Environment, Knowledge, Air, Solar</p>
         <a href="#contact" className="bg-teal-900 py-2 px-6 text-white rounded-md text-lg hover:bg-orange-700 transition duration-300">
           Link
         </a>
