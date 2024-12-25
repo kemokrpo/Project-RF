@@ -8,24 +8,24 @@ export default function Home() {
     
     <div>
       <Hero />
-      <section id="services" className='bg-gold'>
+      <section id="services" className='bg-white'>
         {/*<h2>Naše usluge</h2>*/}
         <Service title="Usluga #1" description="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
       </section>
-      <section id="projects" className='bg-gold'>
+      <section id="projects" className='bg-white'>
         {/*<h2>Projekti</h2>*/}
         <ExcelSlider/>
       </section>
       
-      <section id="about" className='bg-gold font-serif text-2x1'>
+      <section id="about" className='bg-white font-serif text-2x1 text-teal-600'>
         <div className='max-w-[80%] mx-auto'>
 
           <br></br><br></br>
           <h2>O nama</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia facere quas tenetur nobis, autem possimus dicta veniam ullam? Natus explicabo, blanditiis maxime deleniti iusto omnis minima quo optio soluta ab?</p>
+          <p className='text-black'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia facere quas tenetur nobis, autem possimus dicta veniam ullam? Natus explicabo, blanditiis maxime deleniti iusto omnis minima quo optio soluta ab?</p>
         </div>
       </section>
-      <section id="contact" className='bg-gold'>
+      <section id="contact" className='bg-white'>
         {/*<h2>Kontaktirajte nas</h2>*/}
         <ContactForm />
       </section>

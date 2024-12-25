@@ -54,7 +54,7 @@ const ExcelSlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto bg-gray-800 z-9999">
+    <div className="w-full max-w-3xl mx-auto bg-teal-600 z-9999">
       <Slider {...settings}>
         {projects.map((project, index) => (
           <div key={index} className="flex flex-col items-center p-4 bg-blue rounded-lg shadow-lg">
@@ -68,14 +68,14 @@ const ExcelSlider: React.FC = () => {
             )}
             {/* Display Year (Godina), Area (Oblast), and Description (Opis) */}
             <div className="text-center space-y-2">
-              <p className="font-semibold text-lg text-white-800">
-                <span className="text-white-500">Godina:</span> {project.year}
+              <p className="font-semibold text-lg text-white">
+                <span className="text-white">Godina:</span> {project.year}
               </p>
-              <p className="font-semibold text-lg text-white-800">
-                <span className="text-white-500">Oblast:</span> {project.oblast}
+              <p className="font-semibold text-lg text-white">
+                <span className="text-white">Oblast:</span> {project.oblast}
               </p>
-              <p className="font-medium text-white-700">
-                <span className="text-white-500">Opis:</span> {project.description}
+              <p className="font-medium text-white">
+                <span className="text-white">Opis:</span> {project.description}
               </p>
             </div>
           </div>

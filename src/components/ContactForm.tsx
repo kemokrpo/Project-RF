@@ -6,14 +6,14 @@ import React from 'react';
 
 const ContactForm: React.FC = () => {
   return (
-    <section id="contact" className="py-20 px-4 bg-gold text-black">
+    <section id="contact" className="py-20 px-4 bg-white text-teal-600">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Kontaktirajte nas</h2>
 
       <form
         id="contact-form"
         action="mailto:nkrpo.main@gmail.com"
         method="post"
-        className="max-w-xl mx-auto bg-gold p-8 rounded-lg shadow-lg"
+        className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg"
       >
         <div className="mb-6">
           <input
@@ -41,7 +41,7 @@ const ContactForm: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="w-full py-3 bg-orange-500 text-black rounded-lg hover:bg-orange-600 transition duration-300"
+          className="w-full py-3 bg-teal-600 text-white rounded-lg hover:bg-orange-600 transition duration-300"
         >
           Send Message
         </button>

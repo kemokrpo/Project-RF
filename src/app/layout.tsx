@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} bg-gray-900 text-black`}>
         <div>
-          <header className="bg-gold text-black shadow-md">
+          <header className="bg-sky-200 text-teal-600 shadow-md">
             <div className="container mx-auto p-4 flex justify-between items-center">
               <div className="logo text-3xl font-bold">
                 <img src="/logo.png" className="h-24 w-auto"></img>
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </header>
           <main>{children}</main>
-          <footer className="bg-gold text-black py-6">
+          <footer className="bg-sky-200 text-black py-6">
             <div className="container mx-auto text-center">
               <p>&copy; 2025, WEKAS d.o.o, All rights reserved.</p>
             </div>
