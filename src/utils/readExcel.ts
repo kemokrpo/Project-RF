@@ -35,9 +35,7 @@ export const readExcelFile = async (filePath: string): Promise<ProjectData[]> =>
 
     // Loop through the images in the worksheet
     for (const image of worksheet.getImages()) {
-      // Cast the workbook media to an unknown type and then assert it to ExcelMediaType[]
       const media = workbook.model.media as unknown as ExcelMediaType[];
-
       const img: ExcelMediaType | undefined = media.find((m) => m.index === image.imageId);
 
       if (img) {
@@ -46,10 +44,10 @@ export const readExcelFile = async (filePath: string): Promise<ProjectData[]> =>
 
         // Get other row data
         const rowIndex = image.range.tl.nativeRow; // Row index for image (1-indexed)
-        const row = worksheet.getRow(rowIndex+1); // 1-indexed in ExcelJS
-        const oblast = row.getCell(7)?.value as string; // Column G (Oblast)
-        const year = row.getCell(6)?.value as number;   // Column F (Godina)
-        const description = row.getCell(2)?.value as string; // Column B (Opis)
+        const row = worksheet.getRow(rowIndex + 1); // 1-indexed in ExcelJS
+        const oblast = row.getCell(1)?.value as string; // Column A
+        const year = row.getCell(3)?.value as number;   // Column C
+        const description = row.getCell(2)?.value as string; // Column B
 
         data.push({
           sheetName: worksheet.name,
